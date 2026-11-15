@@ -1,4 +1,4 @@
-"""Command line: 'python -m actionx extract --input request.json'."""
+"""Command line: `python -m actionx extract --input request.json`."""
 
 from __future__ import annotations
 

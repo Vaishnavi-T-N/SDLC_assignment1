@@ -15,7 +15,7 @@ from support import busy, participant, request
 
 
 def run_cli(monkeypatch: pytest.MonkeyPatch, args: list[str]) -> tuple[Any, bytes, str]:
-    """Run ''main'' in-process capturing raw stdout bytes and stderr text."""
+    """Run ``main`` in-process capturing raw stdout bytes and stderr text."""
     raw = io.BytesIO()
     out = io.TextIOWrapper(raw, encoding="utf-8", newline="")
     err = io.StringIO()
@@ -210,7 +210,7 @@ def test_ac29_permuted_participants_and_busy_give_identical_bytes(monkeypatch, t
 
 
 def test_ac29_python_dash_m_entry_point_matches_main(monkeypatch, tmp_path):
-    """AC-29 / FR-01: 'python -m slotfinder' (module run as __main__) prints the same bytes."""
+    """AC-29 / FR-01: `python -m slotfinder` (module run as __main__) prints the same bytes."""
     path = write_request(tmp_path, request())
     expected = run_cli(monkeypatch, ["find", "--input", path])
 

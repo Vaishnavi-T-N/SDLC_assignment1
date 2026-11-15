@@ -54,7 +54,7 @@ def slots_of(data: dict[str, Any]) -> list[tuple[str, str]]:
 
 
 def code_of(data: Any) -> str:
-    """Return the error code raised for ''data'' (fails the test if none is raised)."""
+    """Return the error code raised for ``data`` (fails the test if none is raised)."""
     try:
         parse_request(copy.deepcopy(data))
     except SlotFinderError as error:

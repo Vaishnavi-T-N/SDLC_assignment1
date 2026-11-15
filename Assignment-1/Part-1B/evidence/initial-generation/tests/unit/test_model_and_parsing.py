@@ -63,7 +63,7 @@ def test_ac10_plain_json_parses():
 
 
 def test_ac11_fenced_json_parses():
-    assert parse_model_text(```'json\n{"a": 1}\n```') == {"a": 1}
+    assert parse_model_text('```json\n{"a": 1}\n```') == {"a": 1}
     assert parse_model_text('text ```\n{"b": 2}\n``` more') == {"b": 2}
 
 

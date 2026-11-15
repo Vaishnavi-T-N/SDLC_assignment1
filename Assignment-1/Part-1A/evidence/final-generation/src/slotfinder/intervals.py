@@ -18,13 +18,13 @@ def merge(intervals: list[Interval]) -> list[Interval]:
 
 
 def clip(intervals: list[Interval], lo: datetime, hi: datetime) -> list[Interval]:
-    """Restrict intervals to ''[lo, hi)'', dropping those that become empty."""
+    """Restrict intervals to ``[lo, hi)``, dropping those that become empty."""
     clipped = [(max(start, lo), min(end, hi)) for start, end in intervals]
     return [i for i in clipped if i[0] < i[1]]
 
 
 def subtract(base: list[Interval], cuts: list[Interval]) -> list[Interval]:
-    """Return ''base'' minus ''cuts''; both inputs must be merged."""
+    """Return ``base`` minus ``cuts``; both inputs must be merged."""
     result: list[Interval] = []
     for start, end in base:
         cursor = start

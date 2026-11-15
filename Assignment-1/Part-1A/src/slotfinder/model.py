@@ -9,7 +9,7 @@ from slotfinder.intervals import Interval
 
 @dataclass(frozen=True)
 class WorkingHours:
-    """Local wall-clock range within one day, ''start < end''."""
+    """Local wall-clock range within one day, ``start < end``."""
 
     start: time
     end: time

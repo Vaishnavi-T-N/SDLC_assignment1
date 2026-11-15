@@ -26,7 +26,7 @@ def words(text: str) -> list[str]:
 
 
 def contains_sequence(haystack: list[str], needle: list[str]) -> bool:
-    """True when 'needle' occurs as a contiguous run inside 'haystack' (empty needle: False)."""
+    """True when `needle` occurs as a contiguous run inside `haystack` (empty needle: False)."""
     size = len(needle)
     if size == 0 or size > len(haystack):
         return False
@@ -34,7 +34,7 @@ def contains_sequence(haystack: list[str], needle: list[str]) -> bool:
 
 
 def word_runs(word_list: list[str], size: int) -> set[tuple[str, ...]]:
-    """All contiguous runs of 'size' words."""
+    """All contiguous runs of `size` words."""
     return {tuple(word_list[i : i + size]) for i in range(len(word_list) - size + 1)}
 
 
@@ -44,5 +44,5 @@ def tokens(text: str) -> set[str]:
 
 
 def urls(text: str) -> set[str]:
-    """URLs in 'text', lower-cased and stripped of trailing punctuation."""
+    """URLs in `text`, lower-cased and stripped of trailing punctuation."""
     return {match.rstrip(_URL_TRAIL).casefold() for match in URL_RE.findall(text)}

@@ -2,16 +2,16 @@
 
 ## Command
 
-'python -m slotfinder find --input <path>'
+`python -m slotfinder find --input <path>`
 
 | Outcome | Exit | stdout | stderr |
 |---------|------|--------|--------|
-| success | 0 | '{"slots":[{"end":"<UTC>Z","start":"<UTC>Z"},...]}' + LF | empty |
-| input error | 2 | '{"error":{"code":"<CODE>","message":"<text>"}}' + LF | empty |
+| success | 0 | `{"slots":[{"end":"<UTC>Z","start":"<UTC>Z"},...]}` + LF | empty |
+| input error | 2 | `{"error":{"code":"<CODE>","message":"<text>"}}` + LF | empty |
 | usage error (argparse) | 2 | empty | usage text (not part of the JSON contract) |
 
 Output is UTF-8, compact separators, keys sorted, single trailing LF, never CR (FR-20, AC-27).
-Timestamps: 'YYYY-MM-DDTHH:MM:SSZ' (FR-17).
+Timestamps: `YYYY-MM-DDTHH:MM:SSZ` (FR-17).
 
 ## Error codes (stable; Constitution VI)
 

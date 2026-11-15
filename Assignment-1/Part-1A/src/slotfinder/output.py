@@ -9,7 +9,7 @@ from slotfinder.intervals import Interval
 
 
 def format_utc(moment: datetime) -> str:
-    """Format a UTC datetime as ''YYYY-MM-DDTHH:MM:SSZ''."""
+    """Format a UTC datetime as ``YYYY-MM-DDTHH:MM:SSZ``."""
     return moment.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 

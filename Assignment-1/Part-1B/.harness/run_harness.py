@@ -117,7 +117,7 @@ def gate_security(py: str, run_id: str) -> dict:
 
 
 def parse_expected_observed(text: str) -> dict | None:
-    """Best-effort extraction of ''assert <observed> == <expected>'' from a pytest message."""
+    """Best-effort extraction of ``assert <observed> == <expected>`` from a pytest message."""
     for line in text.splitlines():
         match = re.search(r"assert (.+?) == (.+)$", line.strip())
         if match:

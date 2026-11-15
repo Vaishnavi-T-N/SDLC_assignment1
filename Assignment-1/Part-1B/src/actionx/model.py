@@ -44,7 +44,7 @@ class ExtractionRequest:
 
 
 def parse_request(data: Mapping[str, Any]) -> ExtractionRequest:
-    """Validate a request mapping and build an 'ExtractionRequest'."""
+    """Validate a request mapping and build an `ExtractionRequest`."""
     if not isinstance(data, Mapping):
         raise InputError("request must be a JSON object")
     notes = data.get("notes")

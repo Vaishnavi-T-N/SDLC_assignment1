@@ -10,7 +10,7 @@ from slotfinder.model import Participant, Request
 def working_intervals(participant: Participant, window: Interval) -> list[Interval]:
     """UTC working ranges of one participant, clipped to the window and merged.
 
-    Wall-clock times are converted with ''fold=0'' (PEP 495), endpoint by endpoint; a day whose
+    Wall-clock times are converted with ``fold=0`` (PEP 495), endpoint by endpoint; a day whose
     converted range is empty or negative contributes nothing (FR-12).
     """
     tz = participant.tz

@@ -1,6 +1,6 @@
 """Layer 3 deterministic scoring and the verdict rule (pure, no I/O).
 
-The numbers in THRESHOLDS are those of the 'evaluation-thresholds' block in the spec; a test
+The numbers in THRESHOLDS are those of the `evaluation-thresholds` block in the spec; a test
 asserts they are identical. Changing one requires a spec Changelog entry.
 """
 

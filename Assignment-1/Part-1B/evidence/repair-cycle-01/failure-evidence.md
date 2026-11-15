@@ -1,10 +1,10 @@
 # Failure evidence: repair cycle 01 (source: run-01)
-Machine-extracted from 'evidence/harness-results/run-01.json' (kept unchanged). Run at 2026-11-15T07:15:07+00:00, overall FAIL.
+Machine-extracted from `evidence/harness-results/run-01.json` (kept unchanged). Run at 2026-11-15T07:15:07+00:00, overall FAIL.
 Gate outcomes: lint=FAIL, security=FAIL, tests=FAIL
 
 ## Gate: lint (FAIL, exit code 1)
 
-Command: 'C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m ruff check src tests --output-format json --no-cache'
+Command: `C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m ruff check src tests --output-format json --no-cache`
 
 ### Failed items (parsed)
 - {"rule": "E501", "file": "src/actionx/extractor.py", "line": 83, "message": "Line too long (101 > 100)"}
@@ -51,14 +51,14 @@ Command: 'C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m ruff check src tes
 
 ## Gate: security (FAIL, exit code 1)
 
-Command: 'C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json'
+Command: `C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json`
 
 ### Failed items (parsed)
 - {"rule": "B105", "name": "hardcoded_password_string", "severity": "LOW", "confidence": "MEDIUM", "file": "src/actionx/scoring.py", "line": 15, "message": "Possible hardcoded password: '1.0'"}
 
 ## Gate: tests (FAIL, exit code 1)
 
-Command: 'C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m pytest --cov=actionx --cov-report=json:C:\Assignment-1\Part-1B\evidence\harness-results\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\Assignment-1\Part-1B\evidence\harness-results\run-01-junit.xml -p no:cacheprovider -q'
+Command: `C:\Assignment-1\Part-1B\.venv\Scripts\python.exe -m pytest --cov=actionx --cov-report=json:C:\Assignment-1\Part-1B\evidence\harness-results\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\Assignment-1\Part-1B\evidence\harness-results\run-01-junit.xml -p no:cacheprovider -q`
 
 ### Failed items (parsed)
 - {"test": "tests.unit.test_scoring::test_ac50_below_cutoff_does_not_match", "kind": "failure", "message": "assert [(0, 0, 0.6976744186046512)] == []\n  \n  Left contains one more item: (0, 0, 0.6976744186046512)\n  Use -v to get more diff\ndef test_ac50_below_cutoff_does_not_match():\n>       assert match_items([it(\"alpha beta gamma delta\")], [it(\"alpha omega sigma tau\")]) == []\nE       assert [(0, 0, 0.6976744186046512)] == []\nE         \nE         Left contains one more item: (0, 0, 0.6976744186046512)\nE         Use -v to get more diff\n\ntests\\unit\\test_scoring.py:43: AssertionError", "expected_vs_observed": {"observed": "[(0, 0, 0.6976744186046512)]", "expected": "[]"}}
