@@ -1,0 +1,188 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 40,
+      "row": 14
+    },
+    "filename": "C:\\Assignment-1\\Part-1A\\tests\\contract\\test_cli_contract.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import io\r\nimport json\r\nimport runpy\r\nimport sys\r\nfrom pathlib import Path\r\nfrom typing import Any\r\n\r\nimport pytest\r\n\r\nfrom slotfinder.cli import main\r\nfrom slotfinder.errors import ErrorCode\r\nfrom support import busy, participant, request\r\n\r\n\r\n",
+          "end_location": {
+            "column": 1,
+            "row": 17
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 45,
+      "row": 17
+    },
+    "filename": "C:\\Assignment-1\\Part-1A\\tests\\property\\test_properties.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from datetime import UTC, date, datetime, timedelta\r\nfrom functools import lru_cache\r\nfrom typing import Any\r\nfrom zoneinfo import ZoneInfo\r\n\r\nfrom hypothesis import given\r\nfrom hypothesis import strategies as st\r\n\r\nfrom slotfinder.core import find_slots\r\nfrom slotfinder.output import format_utc, render_success\r\nfrom slotfinder.parsing import parse_request\r\nfrom support import busy, participant, request\r\n\r\n",
+          "end_location": {
+            "column": 1,
+            "row": 19
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 6
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "UP033",
+    "end_location": {
+      "column": 25,
+      "row": 81
+    },
+    "filename": "C:\\Assignment-1\\Part-1A\\tests\\property\\test_properties.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from functools import lru_cache, cache",
+          "end_location": {
+            "column": 32,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        },
+        {
+          "content": "cache",
+          "end_location": {
+            "column": 25,
+            "row": 81
+          },
+          "location": {
+            "column": 2,
+            "row": 81
+          }
+        }
+      ],
+      "message": "Rewrite with `@functools.cache"
+    },
+    "location": {
+      "column": 11,
+      "row": 81
+    },
+    "message": "Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`",
+    "name": "lru-cache-with-maxsize-none",
+    "noqa_row": 81,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/lru-cache-with-maxsize-none"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 57,
+      "row": 4
+    },
+    "filename": "C:\\Assignment-1\\Part-1A\\tests\\unit\\test_core.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import pytest\n\nfrom support import busy, participant, request, slots_of\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 45,
+      "row": 10
+    },
+    "filename": "C:\\Assignment-1\\Part-1A\\tests\\unit\\test_parsing.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import copy\r\nfrom datetime import timedelta\r\nfrom typing import Any\r\n\r\nimport pytest\r\n\r\nfrom slotfinder.parsing import parse_request\r\nfrom support import busy, code_of, participant, request\r\n\r\n\r\n",
+          "end_location": {
+            "column": 1,
+            "row": 13
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  }
+]

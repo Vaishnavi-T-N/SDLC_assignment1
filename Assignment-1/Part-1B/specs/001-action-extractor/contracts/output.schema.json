@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/actionx/output.schema.json",
+  "title": "ActionItemExtraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action_items",
+    "needs_clarification",
+    "clarification_question",
+    "refusal",
+    "refusal_reason"
+  ],
+  "properties": {
+    "action_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["task", "owner", "due_date", "confidence", "evidence"],
+        "properties": {
+          "task": {"type": "string"},
+          "owner": {"type": ["string", "null"]},
+          "due_date": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "needs_clarification": {"type": "boolean"},
+    "clarification_question": {"type": ["string", "null"]},
+    "refusal": {"type": "boolean"},
+    "refusal_reason": {"type": ["string", "null"]}
+  }
+}

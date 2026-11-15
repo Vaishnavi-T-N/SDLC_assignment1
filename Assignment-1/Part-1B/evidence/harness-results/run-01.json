@@ -1,0 +1,320 @@
+{
+  "run": "run-01",
+  "timestamp_utc": "2026-11-15T07:15:07+00:00",
+  "python": "3.13.15",
+  "overall": "FAIL",
+  "gates": [
+    {
+      "gate": "lint",
+      "command": "C:\\Assignment-1\\Part-1B\\.venv\\Scripts\\python.exe -m ruff check src tests --output-format json --no-cache",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "rule": "E501",
+          "file": "src/actionx/extractor.py",
+          "line": 83,
+          "message": "Line too long (101 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "src/actionx/guardrails.py",
+          "line": 112,
+          "message": "Line too long (104 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "src/actionx/invariants.py",
+          "line": 113,
+          "message": "Line too long (102 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "src/actionx/invariants.py",
+          "line": 127,
+          "message": "Line too long (102 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "src/actionx/model.py",
+          "line": 24,
+          "message": "Line too long (104 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_dataset.py",
+          "line": 14,
+          "message": "Line too long (102 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_dataset.py",
+          "line": 25,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_dataset.py",
+          "line": 27,
+          "message": "Line too long (106 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_dataset.py",
+          "line": 93,
+          "message": "Line too long (101 > 100)"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/contract/test_harness.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_harness.py",
+          "line": 79,
+          "message": "Line too long (102 > 100)"
+        },
+        {
+          "rule": "S105",
+          "file": "tests/contract/test_harness.py",
+          "line": 87,
+          "message": "Possible hardcoded password assigned to: \"secret\""
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_harness.py",
+          "line": 90,
+          "message": "Line too long (107 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_harness.py",
+          "line": 99,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_harness.py",
+          "line": 103,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_harness.py",
+          "line": 170,
+          "message": "Line too long (105 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_purity_traceability_secrets.py",
+          "line": 12,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_purity_traceability_secrets.py",
+          "line": 33,
+          "message": "Line too long (111 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_purity_traceability_secrets.py",
+          "line": 42,
+          "message": "Line too long (111 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/contract/test_purity_traceability_secrets.py",
+          "line": 51,
+          "message": "Line too long (102 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/support.py",
+          "line": 28,
+          "message": "Line too long (104 > 100)"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_client_config.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_contract.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_extractor_cli.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_extractor_cli.py",
+          "line": 14,
+          "message": "Line too long (108 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_extractor_cli.py",
+          "line": 137,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_extractor_cli.py",
+          "line": 167,
+          "message": "Line too long (104 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_extractor_cli.py",
+          "line": 169,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_guardrails.py",
+          "line": 37,
+          "message": "Line too long (110 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_guardrails.py",
+          "line": 44,
+          "message": "Line too long (110 > 100)"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_invariants.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_invariants.py",
+          "line": 40,
+          "message": "Line too long (107 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_invariants.py",
+          "line": 63,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_invariants.py",
+          "line": 126,
+          "message": "Line too long (104 > 100)"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 19,
+          "message": "Line too long (103 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 46,
+          "message": "Line too long (101 > 100)"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_scoring.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_scoring.py",
+          "line": 71,
+          "message": "Line too long (105 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_scoring.py",
+          "line": 87,
+          "message": "Line too long (117 > 100)"
+        },
+        {
+          "rule": "E501",
+          "file": "tests/unit/test_scoring.py",
+          "line": 112,
+          "message": "Line too long (103 > 100)"
+        }
+      ],
+      "details": {
+        "violations": 41,
+        "parse_error": null
+      },
+      "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 102,\n      \"row\": 83\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\src\\\\actionx\\\\extractor.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 83\n    },\n    \"message\": \"Line too long (101 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 83,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 105,\n      \"row\": 112\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\src\\\\actionx\\\\guardrails.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 112\n    },\n    \"message\": \"Line too long (104 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 112,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 103,\n      \"row\": 113\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\src\\\\actionx\\\\invariants.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 113\n    },\n    \"message\": \"Line too long (102 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 113,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 103,\n      \"row\": 127\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\src\\\\actionx\\\\invariants.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 127\n    },\n    \"message\": \"Line too long (102 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 127,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 105,\n      \"row\": 24\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\src\\\\actionx\\\\model.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 24\n    },\n    \"message\": \"Line too long (104 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 24,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 103,\n      \"row\": 14\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_dataset.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 14\n    },\n    \"message\": \"Line too long (102 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 25\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_dataset.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 25\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 25,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 107,\n      \"row\": 27\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_dataset.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 27\n    },\n    \"message\": \"Line too long (106 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 27,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 102,\n      \"row\": 93\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_dataset.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 93\n    },\n    \"message\": \"Line too long (101 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 93,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 76,\n      \"row\": 12\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\r\\n\\r\\nimport importlib.util\\r\\nimport json\\r\\nimport sys\\r\\n\\r\\nimport pytest\\r\\n\\r\\nfrom actionx.client import FakeModelClient, ServiceError\\r\\nfrom actionx.config import Config\\r\\nfrom support import CONFIG, ROOT, SCHEMA, SYSTEM_PROMPT, dumps, good_output\\r\\n\\r\\n\\r\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 15\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 103,\n      \"row\": 79\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 79\n    },\n    \"message\": \"Line too long (102 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 79,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"S105\",\n    \"end_location\": {\n      \"column\": 46,\n      \"row\": 87\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 14,\n      \"row\": 87\n    },\n    \"message\": \"Possible hardcoded password assigned to: \\\"secret\\\"\",\n    \"name\": \"hardcoded-password-string\",\n    \"noqa_row\": 87,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/hardcoded-password-string\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 108,\n      \"row\": 90\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 90\n    },\n    \"message\": \"Line too long (107 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 90,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 99\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 99\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 99,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 103\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 103\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 103,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 106,\n      \"row\": 170\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_harness.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 170\n    },\n    \"message\": \"Line too long (105 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 170,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 12\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_purity_traceability_secrets.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 12\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 112,\n      \"row\": 33\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_purity_traceability_secrets.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 33\n    },\n    \"message\": \"Line too long (111 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 33,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 112,\n      \"row\": 42\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_purity_traceability_secrets.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 42\n    },\n    \"message\": \"Line too long (111 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 42,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 103,\n      \"row\": 51\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\contract\\\\test_purity_traceability_secrets.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 51\n    },\n    \"message\": \"Line too long (102 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 51,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 105,\n      \"row\": 28\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\support.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 28\n    },\n    \"message\": \"Line too long (104 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 28,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 16\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_client_config.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nfrom types import SimpleNamespace\\n\\nimport pytest\\n\\nfrom actionx.client import FakeModelClient, GeminiClient, ServiceError\\nfrom actionx.config import (\\n    DEFAULT_MODEL,\\n    SEED,\\n    TEMPERATURE,\\n    ConfigError,\\n    load_config,\\n    load_dotenv,\\n)\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 18\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 40,\n      \"row\": 10\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_contract.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nimport copy\\n\\nimport pytest\\nfrom jsonschema import Draft202012Validator\\n\\nfrom actionx.contract import gemini_schema, validate_output\\nfrom support import SCHEMA, good_output\\n\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 109,\n      \"row\": 14\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_extractor_cli.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nimport json\\n\\nimport pytest\\n\\nfrom actionx.cli import main\\nfrom actionx.client import FakeModelClient, ServiceError\\nfrom actionx.contract import gemini_schema\\nfrom actionx.extractor import PROMPT_PATH\\nfrom actionx.invariants import check_invariants\\nfrom actionx.model import FALLBACK_QUESTION\\nfrom support import (\\n    CONFIG,\\n    NOTES,\\n    SCHEMA,\\n    SYSTEM_PROMPT,\\n    dumps,\\n    good_item,\\n    good_output,\\n    make_extractor,\\n    req,\\n)\\n\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 17\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 109,\n      \"row\": 14\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_extractor_cli.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 14\n    },\n    \"message\": \"Line too long (108 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 137\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_extractor_cli.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 137\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 137,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 105,\n      \"row\": 167\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_extractor_cli.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 167\n    },\n    \"message\": \"Line too long (104 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 167,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 169\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_extractor_cli.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 169\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 169,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 111,\n      \"row\": 37\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_guardrails.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 37\n    },\n    \"message\": \"Line too long (110 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 37,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 111,\n      \"row\": 44\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_guardrails.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 44\n    },\n    \"message\": \"Line too long (110 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 44,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 68,\n      \"row\": 7\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_invariants.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nimport pytest\\n\\nfrom actionx.invariants import check_invariants, check_properties\\nfrom support import SYSTEM_PROMPT, good_item, good_output, ids, req\\n\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 10\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 108,\n      \"row\": 40\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_invariants.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 40\n    },\n    \"message\": \"Line too long (107 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 40,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 63\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_invariants.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 63\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 63,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 105,\n      \"row\": 126\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_invariants.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 126\n    },\n    \"message\": \"Line too long (104 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 126,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 24,\n      \"row\": 16\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_model_and_parsing.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nimport pytest\\n\\nfrom actionx.model import (\\n    InputError,\\n    ParseError,\\n    build_user_message,\\n    clarification_output,\\n    fallback_output,\\n    parse_request,\\n    refusal_output,\\n)\\nfrom actionx.parsing import parse_model_text\\nfrom support import req\\n\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 19\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 19\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_model_and_parsing.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 19\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 102,\n      \"row\": 46\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_model_and_parsing.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 46\n    },\n    \"message\": \"Line too long (101 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 46,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 30,\n      \"row\": 17\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_scoring.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from __future__ import annotations\\n\\nimport json\\nimport re\\n\\nimport pytest\\n\\nfrom actionx.scoring import (\\n    THRESHOLDS,\\n    aggregate,\\n    match_items,\\n    score_case,\\n    similarity,\\n    verdict,\\n)\\nfrom support import SPEC_PATH\\n\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 106,\n      \"row\": 71\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_scoring.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 71\n    },\n    \"message\": \"Line too long (105 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 71,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 118,\n      \"row\": 87\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_scoring.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 87\n    },\n    \"message\": \"Line too long (117 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 87,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"E501\",\n    \"end_location\": {\n      \"column\": 104,\n      \"row\": 112\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1B\\\\tests\\\\unit\\\\test_scoring.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 101,\n      \"row\": 112\n    },\n    \"message\": \"Line too long (103 > 100)\",\n    \"name\": \"line-too-long\",\n    \"noqa_row\": 112,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/line-too-long\"\n  }\n]",
+      "stderr": ""
+    },
+    {
+      "gate": "security",
+      "command": "C:\\Assignment-1\\Part-1B\\.venv\\Scripts\\python.exe -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "rule": "B105",
+          "name": "hardcoded_password_string",
+          "severity": "LOW",
+          "confidence": "MEDIUM",
+          "file": "src/actionx/scoring.py",
+          "line": 15,
+          "message": "Possible hardcoded password: '1.0'"
+        }
+      ],
+      "details": {
+        "findings": 1,
+        "tool_errors": [],
+        "parse_error": null
+      },
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-11-15T07:15:09Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 1,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 949,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 2,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\__main__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 3,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\client.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 110,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\config.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 59,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\contract.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\extractor.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 97,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\guardrails.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 142,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\invariants.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 168,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\model.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 77,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\parsing.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 50,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\scoring.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 1,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 121,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\actionx\\\\textnorm.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 32,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": [\n    {\n      \"code\": \"14 THRESHOLDS: dict[str, float] = {\\n15     \\\"hard_gate_pass_rate\\\": 1.0,\\n16     \\\"f1_min\\\": 0.80,\\n17     \\\"owner_accuracy_min\\\": 0.85,\\n18     \\\"due_accuracy_min\\\": 0.85,\\n19     \\\"fabrication_max\\\": 0,\\n20     \\\"match_similarity_cutoff\\\": 0.5,\\n21 }\\n22 \\n23 \\n\",\n      \"col_offset\": 4,\n      \"end_col_offset\": 25,\n      \"filename\": \"src\\\\actionx\\\\scoring.py\",\n      \"issue_confidence\": \"MEDIUM\",\n      \"issue_cwe\": {\n        \"id\": 259,\n        \"link\": \"https://cwe.mitre.org/data/definitions/259.html\"\n      },\n      \"issue_severity\": \"LOW\",\n      \"issue_text\": \"Possible hardcoded password: '1.0'\",\n      \"line_number\": 15,\n      \"line_range\": [\n        14,\n        15,\n        16,\n        17,\n        18,\n        19,\n        20,\n        21\n      ],\n      \"more_info\": \"https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html\",\n      \"test_id\": \"B105\",\n      \"test_name\": \"hardcoded_password_string\"\n    }\n  ]\n}",
+      "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+    },
+    {
+      "gate": "tests",
+      "command": "C:\\Assignment-1\\Part-1B\\.venv\\Scripts\\python.exe -m pytest --cov=actionx --cov-report=json:C:\\Assignment-1\\Part-1B\\evidence\\harness-results\\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\\Assignment-1\\Part-1B\\evidence\\harness-results\\run-01-junit.xml -p no:cacheprovider -q",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "test": "tests.unit.test_scoring::test_ac50_below_cutoff_does_not_match",
+          "kind": "failure",
+          "message": "assert [(0, 0, 0.6976744186046512)] == []\n  \n  Left contains one more item: (0, 0, 0.6976744186046512)\n  Use -v to get more diff\ndef test_ac50_below_cutoff_does_not_match():\n>       assert match_items([it(\"alpha beta gamma delta\")], [it(\"alpha omega sigma tau\")]) == []\nE       assert [(0, 0, 0.6976744186046512)] == []\nE         \nE         Left contains one more item: (0, 0, 0.6976744186046512)\nE         Use -v to get more diff\n\ntests\\unit\\test_scoring.py:43: AssertionError",
+          "expected_vs_observed": {
+            "observed": "[(0, 0, 0.6976744186046512)]",
+            "expected": "[]"
+          }
+        }
+      ],
+      "details": {
+        "tests": 142,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "line_coverage_percent": 99.06687402799378,
+        "coverage_threshold_percent": 90.0,
+        "parse_error": null
+      },
+      "stdout": "........................................................................ [ 50%]\n..............................................................F.......   [100%]\n================================== FAILURES ===================================\n____________________ test_ac50_below_cutoff_does_not_match ____________________\n\n    def test_ac50_below_cutoff_does_not_match():\n>       assert match_items([it(\"alpha beta gamma delta\")], [it(\"alpha omega sigma tau\")]) == []\nE       assert [(0, 0, 0.6976744186046512)] == []\nE         \nE         Left contains one more item: (0, 0, 0.6976744186046512)\nE         Use -v to get more diff\n\ntests\\unit\\test_scoring.py:43: AssertionError\n=============================== tests coverage ================================\n______________ coverage: platform win32, python 3.13.15-final-0 _______________\n\nName                        Stmts   Miss  Cover   Missing\n---------------------------------------------------------\nsrc\\actionx\\__init__.py         1      0   100%\nsrc\\actionx\\__main__.py         3      3     0%   1-5\nsrc\\actionx\\cli.py             35      1    97%   20\nsrc\\actionx\\client.py          53      0   100%\nsrc\\actionx\\config.py          42      0   100%\nsrc\\actionx\\contract.py        23      0   100%\nsrc\\actionx\\extractor.py       65      0   100%\nsrc\\actionx\\guardrails.py     105      0   100%\nsrc\\actionx\\invariants.py     134      1    99%   69\nsrc\\actionx\\model.py           52      0   100%\nsrc\\actionx\\parsing.py         47      0   100%\nsrc\\actionx\\scoring.py         60      0   100%\nsrc\\actionx\\textnorm.py        23      1    96%   32\n---------------------------------------------------------\nTOTAL                         643      6    99%\nCoverage JSON written to file C:\\Assignment-1\\Part-1B\\evidence\\harness-results\\run-01-coverage.json\nRequired test coverage of 90% reached. Total coverage: 99.07%\n=========================== short test summary info ===========================\nFAILED tests/unit/test_scoring.py::test_ac50_below_cutoff_does_not_match - as...\n1 failed, 141 passed in 6.25s\n",
+      "stderr": ""
+    }
+  ]
+}

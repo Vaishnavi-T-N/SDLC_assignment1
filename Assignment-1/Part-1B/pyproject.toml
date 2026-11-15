@@ -1,0 +1,20 @@
+[project]
+name = "actionx"
+version = "0.1.0"
+description = "Meeting-notes action-item extractor (Gemini) with an evaluation harness"
+requires-python = "==3.13.*"
+dependencies = ["google-genai==3.3.0", "jsonschema==4.26.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["actionx"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]

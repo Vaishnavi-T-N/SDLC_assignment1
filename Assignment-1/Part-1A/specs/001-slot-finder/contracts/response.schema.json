@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SlotFinderResponse",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["slots"],
+      "additionalProperties": false,
+      "properties": {
+        "slots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["start", "end"],
+            "additionalProperties": false,
+            "properties": {
+              "start": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
+              "end": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["error"],
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "type": "object",
+          "required": ["code", "message"],
+          "additionalProperties": false,
+          "properties": {
+            "code": {"enum": ["INVALID_JSON", "MISSING_FIELD", "NAIVE_DATETIME", "INVALID_INTERVAL",
+                              "INVALID_TIMEZONE", "INVALID_WORKING_HOURS", "INVALID_DURATION",
+                              "INVALID_WINDOW", "TOO_MANY_PARTICIPANTS"]},
+            "message": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  ]
+}

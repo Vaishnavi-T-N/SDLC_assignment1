@@ -1,0 +1,44 @@
+.......................F................................................ [ 35%]
+........................................................................ [ 71%]
+..........................................................               [100%]
+================================== FAILURES ===================================
+___________ test_ac31_every_acceptance_criterion_is_cited_by_a_test ___________
+
+    def test_ac31_every_acceptance_criterion_is_cited_by_a_test():
+        """AC-31: each AC-nn defined in spec.md appears in at least one test file."""
+        ac_ids = spec_ids("AC")
+        assert len(ac_ids) >= 33
+        corpus = "\n".join(
+            path.read_text(encoding="utf-8")
+            for path in TESTS.rglob("test_*.py")
+            if path.name != "test_traceability.py"
+        )
+        uncited = [ac for ac in ac_ids if ac not in corpus]
+>       assert uncited == []
+E       AssertionError: assert ['AC-31'] == []
+E         
+E         Left contains one more item: 'AC-31'
+E         Use -v to get more diff
+
+tests\contract\test_traceability.py:28: AssertionError
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.13.15-final-0 _______________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+src\slotfinder\__init__.py        1      0   100%
+src\slotfinder\__main__.py        3      0   100%
+src\slotfinder\cli.py            35      0   100%
+src\slotfinder\core.py           24      0   100%
+src\slotfinder\errors.py         16      0   100%
+src\slotfinder\intervals.py      42      0   100%
+src\slotfinder\model.py          19      0   100%
+src\slotfinder\output.py         13      0   100%
+src\slotfinder\parsing.py       119      0   100%
+-----------------------------------------------------------
+TOTAL                           272      0   100%
+Coverage JSON written to file C:\Assignment-1\Part-1A\evidence\harness-results\run-01-coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+=========================== short test summary info ===========================
+FAILED tests/contract/test_traceability.py::test_ac31_every_acceptance_criterion_is_cited_by_a_test
+1 failed, 201 passed in 15.67s

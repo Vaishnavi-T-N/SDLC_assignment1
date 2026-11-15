@@ -1,0 +1,94 @@
+{
+  "run": "run-01",
+  "timestamp_utc": "2026-11-15T06:48:11+00:00",
+  "python": "3.13.15",
+  "overall": "FAIL",
+  "gates": [
+    {
+      "gate": "lint",
+      "command": "C:\\Assignment-1\\Part-1A\\.venv\\Scripts\\python.exe -m ruff check src tests --output-format json --no-cache",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "rule": "I001",
+          "file": "tests/contract/test_cli_contract.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/property/test_properties.py",
+          "line": 6,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "UP033",
+          "file": "tests/property/test_properties.py",
+          "line": 81,
+          "message": "Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_core.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "rule": "I001",
+          "file": "tests/unit/test_parsing.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        }
+      ],
+      "details": {
+        "violations": 5,
+        "parse_error": null
+      },
+      "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 40,\n      \"row\": 14\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\contract\\\\test_cli_contract.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"import io\\r\\nimport json\\r\\nimport runpy\\r\\nimport sys\\r\\nfrom pathlib import Path\\r\\nfrom typing import Any\\r\\n\\r\\nimport pytest\\r\\n\\r\\nfrom slotfinder.cli import main\\r\\nfrom slotfinder.errors import ErrorCode\\r\\nfrom support import busy, participant, request\\r\\n\\r\\n\\r\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 17\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 17\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\property\\\\test_properties.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from datetime import UTC, date, datetime, timedelta\\r\\nfrom functools import lru_cache\\r\\nfrom typing import Any\\r\\nfrom zoneinfo import ZoneInfo\\r\\n\\r\\nfrom hypothesis import given\\r\\nfrom hypothesis import strategies as st\\r\\n\\r\\nfrom slotfinder.core import find_slots\\r\\nfrom slotfinder.output import format_utc, render_success\\r\\nfrom slotfinder.parsing import parse_request\\r\\nfrom support import busy, participant, request\\r\\n\\r\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 19\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"UP033\",\n    \"end_location\": {\n      \"column\": 25,\n      \"row\": 81\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\property\\\\test_properties.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from functools import lru_cache, cache\",\n          \"end_location\": {\n            \"column\": 32,\n            \"row\": 7\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 7\n          }\n        },\n        {\n          \"content\": \"cache\",\n          \"end_location\": {\n            \"column\": 25,\n            \"row\": 81\n          },\n          \"location\": {\n            \"column\": 2,\n            \"row\": 81\n          }\n        }\n      ],\n      \"message\": \"Rewrite with `@functools.cache\"\n    },\n    \"location\": {\n      \"column\": 11,\n      \"row\": 81\n    },\n    \"message\": \"Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`\",\n    \"name\": \"lru-cache-with-maxsize-none\",\n    \"noqa_row\": 81,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/lru-cache-with-maxsize-none\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 57,\n      \"row\": 4\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\unit\\\\test_core.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"import pytest\\n\\nfrom support import busy, participant, request, slots_of\\n\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 6\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"I001\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 10\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\unit\\\\test_parsing.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"import copy\\r\\nfrom datetime import timedelta\\r\\nfrom typing import Any\\r\\n\\r\\nimport pytest\\r\\n\\r\\nfrom slotfinder.parsing import parse_request\\r\\nfrom support import busy, code_of, participant, request\\r\\n\\r\\n\\r\\n\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Organize imports\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Import block is un-sorted or un-formatted\",\n    \"name\": \"unsorted-imports\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unsorted-imports\"\n  }\n]",
+      "stderr": ""
+    },
+    {
+      "gate": "security",
+      "command": "C:\\Assignment-1\\Part-1A\\.venv\\Scripts\\python.exe -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "findings": 0,
+        "tool_errors": [],
+        "parse_error": null
+      },
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-11-15T06:48:13Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 323,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 2,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\__main__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 4,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 39,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\core.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 31,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\errors.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 19,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\intervals.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 49,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\model.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 23,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\output.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 19,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src\\\\slotfinder\\\\parsing.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 137,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+      "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+    },
+    {
+      "gate": "tests",
+      "command": "C:\\Assignment-1\\Part-1A\\.venv\\Scripts\\python.exe -m pytest --cov=slotfinder --cov-report=json:C:\\Assignment-1\\Part-1A\\evidence\\harness-results\\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\\Assignment-1\\Part-1A\\evidence\\harness-results\\run-01-junit.xml -p no:cacheprovider -q",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "test": "tests.contract.test_traceability::test_ac31_every_acceptance_criterion_is_cited_by_a_test",
+          "kind": "failure",
+          "message": "AssertionError: assert ['AC-31'] == []\n  \n  Left contains one more item: 'AC-31'\n  Use -v to get more diff\ndef test_ac31_every_acceptance_criterion_is_cited_by_a_test():\n        \"\"\"AC-31: each AC-nn defined in spec.md appears in at least one test file.\"\"\"\n        ac_ids = spec_ids(\"AC\")\n        assert len(ac_ids) >= 33\n        corpus = \"\\n\".join(\n            path.read_text(encoding=\"utf-8\")\n            for path in TESTS.rglob(\"test_*.py\")\n            if path.name != \"test_traceability.py\"\n        )\n        uncited = [ac for ac in ac_ids if ac not in corpus]\n>       assert uncited == []\nE       AssertionError: assert ['AC-31'] == []\nE         \nE         Left contains one more item: 'AC-31'\nE         Use -v to get more diff\n\ntests\\contract\\test_traceability.py:28: AssertionError",
+          "expected_vs_observed": {
+            "observed": "['AC-31']",
+            "expected": "[]"
+          }
+        }
+      ],
+      "details": {
+        "tests": 202,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "line_coverage_percent": 100.0,
+        "coverage_threshold_percent": 90.0,
+        "parse_error": null
+      },
+      "stdout": ".......................F................................................ [ 35%]\n........................................................................ [ 71%]\n..........................................................               [100%]\n================================== FAILURES ===================================\n___________ test_ac31_every_acceptance_criterion_is_cited_by_a_test ___________\n\n    def test_ac31_every_acceptance_criterion_is_cited_by_a_test():\n        \"\"\"AC-31: each AC-nn defined in spec.md appears in at least one test file.\"\"\"\n        ac_ids = spec_ids(\"AC\")\n        assert len(ac_ids) >= 33\n        corpus = \"\\n\".join(\n            path.read_text(encoding=\"utf-8\")\n            for path in TESTS.rglob(\"test_*.py\")\n            if path.name != \"test_traceability.py\"\n        )\n        uncited = [ac for ac in ac_ids if ac not in corpus]\n>       assert uncited == []\nE       AssertionError: assert ['AC-31'] == []\nE         \nE         Left contains one more item: 'AC-31'\nE         Use -v to get more diff\n\ntests\\contract\\test_traceability.py:28: AssertionError\n=============================== tests coverage ================================\n______________ coverage: platform win32, python 3.13.15-final-0 _______________\n\nName                          Stmts   Miss  Cover   Missing\n-----------------------------------------------------------\nsrc\\slotfinder\\__init__.py        1      0   100%\nsrc\\slotfinder\\__main__.py        3      0   100%\nsrc\\slotfinder\\cli.py            35      0   100%\nsrc\\slotfinder\\core.py           24      0   100%\nsrc\\slotfinder\\errors.py         16      0   100%\nsrc\\slotfinder\\intervals.py      42      0   100%\nsrc\\slotfinder\\model.py          19      0   100%\nsrc\\slotfinder\\output.py         13      0   100%\nsrc\\slotfinder\\parsing.py       119      0   100%\n-----------------------------------------------------------\nTOTAL                           272      0   100%\nCoverage JSON written to file C:\\Assignment-1\\Part-1A\\evidence\\harness-results\\run-01-coverage.json\nRequired test coverage of 90% reached. Total coverage: 100.00%\n=========================== short test summary info ===========================\nFAILED tests/contract/test_traceability.py::test_ac31_every_acceptance_criterion_is_cited_by_a_test\n1 failed, 201 passed in 15.67s\n",
+      "stderr": ""
+    }
+  ]
+}

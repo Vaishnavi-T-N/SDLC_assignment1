@@ -1,0 +1,893 @@
+[
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 83
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\src\\actionx\\extractor.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 83
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 83,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 112
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\src\\actionx\\guardrails.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 112
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 112,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 113
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\src\\actionx\\invariants.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 113
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 113,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 127
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\src\\actionx\\invariants.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 127
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 127,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 24
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\src\\actionx\\model.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 24
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 24,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 14
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_dataset.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 14
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 14,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 25
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_dataset.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 25
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 107,
+      "row": 27
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_dataset.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 27
+    },
+    "message": "Line too long (106 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 27,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 93
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_dataset.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 93
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 93,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 76,
+      "row": 12
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\r\n\r\nimport importlib.util\r\nimport json\r\nimport sys\r\n\r\nimport pytest\r\n\r\nfrom actionx.client import FakeModelClient, ServiceError\r\nfrom actionx.config import Config\r\nfrom support import CONFIG, ROOT, SCHEMA, SYSTEM_PROMPT, dumps, good_output\r\n\r\n\r\n",
+          "end_location": {
+            "column": 1,
+            "row": 15
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 79
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 79
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 79,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "S105",
+    "end_location": {
+      "column": 46,
+      "row": 87
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 14,
+      "row": 87
+    },
+    "message": "Possible hardcoded password assigned to: \"secret\"",
+    "name": "hardcoded-password-string",
+    "noqa_row": 87,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/hardcoded-password-string"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 108,
+      "row": 90
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 90
+    },
+    "message": "Line too long (107 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 90,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 99
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 99
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 99,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 103
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 103
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 103,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 106,
+      "row": 170
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_harness.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 170
+    },
+    "message": "Line too long (105 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 170,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 12
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_purity_traceability_secrets.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 12
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 12,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 112,
+      "row": 33
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_purity_traceability_secrets.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 33
+    },
+    "message": "Line too long (111 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 33,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 112,
+      "row": 42
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_purity_traceability_secrets.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 42
+    },
+    "message": "Line too long (111 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 42,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 51
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\contract\\test_purity_traceability_secrets.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 51
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 28
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\support.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 28
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 28,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 2,
+      "row": 16
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_client_config.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nfrom types import SimpleNamespace\n\nimport pytest\n\nfrom actionx.client import FakeModelClient, GeminiClient, ServiceError\nfrom actionx.config import (\n    DEFAULT_MODEL,\n    SEED,\n    TEMPERATURE,\n    ConfigError,\n    load_config,\n    load_dotenv,\n)\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 18
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 40,
+      "row": 10
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_contract.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nimport copy\n\nimport pytest\nfrom jsonschema import Draft202012Validator\n\nfrom actionx.contract import gemini_schema, validate_output\nfrom support import SCHEMA, good_output\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 13
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 109,
+      "row": 14
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_extractor_cli.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nimport json\n\nimport pytest\n\nfrom actionx.cli import main\nfrom actionx.client import FakeModelClient, ServiceError\nfrom actionx.contract import gemini_schema\nfrom actionx.extractor import PROMPT_PATH\nfrom actionx.invariants import check_invariants\nfrom actionx.model import FALLBACK_QUESTION\nfrom support import (\n    CONFIG,\n    NOTES,\n    SCHEMA,\n    SYSTEM_PROMPT,\n    dumps,\n    good_item,\n    good_output,\n    make_extractor,\n    req,\n)\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 17
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 109,
+      "row": 14
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_extractor_cli.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 14
+    },
+    "message": "Line too long (108 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 14,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 137
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_extractor_cli.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 137
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 137,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 167
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_extractor_cli.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 167
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 167,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 169
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_extractor_cli.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 169
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 169,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 111,
+      "row": 37
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_guardrails.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 37
+    },
+    "message": "Line too long (110 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 37,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 111,
+      "row": 44
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_guardrails.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 44
+    },
+    "message": "Line too long (110 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 44,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 68,
+      "row": 7
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_invariants.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nimport pytest\n\nfrom actionx.invariants import check_invariants, check_properties\nfrom support import SYSTEM_PROMPT, good_item, good_output, ids, req\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 108,
+      "row": 40
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_invariants.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 40
+    },
+    "message": "Line too long (107 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 63
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_invariants.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 63
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 63,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 126
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_invariants.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 126
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 126,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 24,
+      "row": 16
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_model_and_parsing.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nimport pytest\n\nfrom actionx.model import (\n    InputError,\n    ParseError,\n    build_user_message,\n    clarification_output,\n    fallback_output,\n    parse_request,\n    refusal_output,\n)\nfrom actionx.parsing import parse_model_text\nfrom support import req\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 19
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 19
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_model_and_parsing.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 19
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 19,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 46
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_model_and_parsing.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 46
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 46,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 30,
+      "row": 17
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_scoring.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import annotations\n\nimport json\nimport re\n\nimport pytest\n\nfrom actionx.scoring import (\n    THRESHOLDS,\n    aggregate,\n    match_items,\n    score_case,\n    similarity,\n    verdict,\n)\nfrom support import SPEC_PATH\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 20
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 106,
+      "row": 71
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_scoring.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 71
+    },
+    "message": "Line too long (105 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 71,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 118,
+      "row": 87
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_scoring.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 87
+    },
+    "message": "Line too long (117 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 87,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 112
+    },
+    "filename": "C:\\Assignment-1\\Part-1B\\tests\\unit\\test_scoring.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 112
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 112,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  }
+]

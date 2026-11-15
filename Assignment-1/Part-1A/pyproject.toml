@@ -1,0 +1,20 @@
+[project]
+name = "slotfinder"
+version = "0.1.0"
+description = "Deterministic meeting-slot finder CLI"
+requires-python = "==3.13.*"
+dependencies = ["tzdata>=2026.1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["slotfinder"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
