@@ -5,23 +5,23 @@ The last section is filled in automatically by `.harness/run_harness.py` and mus
 
 ## Initial generation context
 
-<!-- TODO (student): write this section yourself. -->
+Spec Kit was initialised with `specify init`, and the constitution, specification, clarifications, plan, tasks and analyze report were all written before any code. The specification has 22 functional requirements and 33 acceptance criteria, and the clarify step resolved 5 ambiguities (DST gap and overlap, UTC midnight, error code for unparseable datetimes, touching intervals, sub-second precision). The analyze pass found 6 gaps, which were fixed upstream in the spec (changelog v0.3). The coding agent then implemented tasks T001-T031 from `tasks.md`. `evidence/initial-generation/` holds the first generated `src/` and `tests/`, copied before any harness gate ran; `CONTEXT.md` there lists the input artifacts.
 
 ## Failure evidence supplied to coding agent
 
-<!-- TODO (student): write this section yourself. -->
+Run-01 failed two gates. Lint reported I001 (import order) in four test files and UP033 (`lru_cache(maxsize=None)`) in `tests/property/test_properties.py`. Tests reported one failure, `test_ac31_every_acceptance_criterion_is_cited_by_a_test`, with expected `[]` and observed `['AC-31']`. Run-02 then failed on lint rule F401 (`functools.lru_cache` imported but unused, `tests/property/test_properties.py:7`). The verbatim ruff JSON and pytest output for each were given to the coding agent as `evidence/repair-cycle-01/failure-evidence.md` and `evidence/repair-cycle-02/failure-evidence.md`.
 
 ## Repair description
 
-<!-- TODO (student): write this section yourself. -->
+Cycle 01: the traceability test excluded its own file from the tests allowed to cite an AC, so AC-31 could never pass, which contradicted the criterion's wording. The spec was updated first (AC-31 now says traceability tests count, changelog v0.4), then the test was changed to include its own file with the assertion unchanged, and ruff's safe fixes were applied for I001 and UP033. Cycle 02: the auto-fix left an unused import, which the coding agent removed. Runs 03 and 04 passed all gates. No threshold, ruff or bandit setting, or other assertion was changed, and `evidence/final-generation/` holds the final code.
 
 ## Known limitations
 
-<!-- TODO (student): write this section yourself. -->
+The tests were generated from the same specification as the code, so a wrong spec decision, such as treating DST gaps with PEP 495 `fold=0`, would be consistently wrong in both. Overnight working hours are out of scope and rejected, there are at most 20 participants, and there is no check against real calendar exports or a performance test. The harness refuses any Python other than 3.13. Every failure found was in test code, not in `src`.
 
 ## Final human decision (ACCEPT/REJECT) and justification
 
-<!-- TODO (student): write this section yourself. -->
+ACCEPT. All three gates (Ruff, Bandit, tests with at least 90% coverage) pass on the same configuration that failed earlier, the spec was only changed through a recorded changelog entry, and the failures were disclosed rather than hidden. The harness was also re-run later in a Linux GitHub Codespace with the same result.
 
 ## Machine-recorded runs
 
