@@ -1,0 +1,59 @@
+[
+  {
+    "cell": null,
+    "code": "invalid-syntax",
+    "end_location": {
+      "column": 30,
+      "row": 71
+    },
+    "filename": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 71
+    },
+    "message": "Got unexpected token `",
+    "name": "invalid-syntax",
+    "noqa_row": null,
+    "severity": "error",
+    "url": null
+  },
+  {
+    "cell": null,
+    "code": "invalid-syntax",
+    "end_location": {
+      "column": 31,
+      "row": 71
+    },
+    "filename": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py",
+    "fix": null,
+    "location": {
+      "column": 30,
+      "row": 71
+    },
+    "message": "Got unexpected token `",
+    "name": "invalid-syntax",
+    "noqa_row": null,
+    "severity": "error",
+    "url": null
+  },
+  {
+    "cell": null,
+    "code": "invalid-syntax",
+    "end_location": {
+      "column": 32,
+      "row": 71
+    },
+    "filename": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py",
+    "fix": null,
+    "location": {
+      "column": 31,
+      "row": 71
+    },
+    "message": "Got unexpected token `",
+    "name": "invalid-syntax",
+    "noqa_row": null,
+    "severity": "error",
+    "url": null
+  }
+]

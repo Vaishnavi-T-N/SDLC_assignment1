@@ -1,0 +1,22 @@
+........................................................................ [ 35%]
+........................................................................ [ 71%]
+..........................................................               [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.18-final-0 _______________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+src/slotfinder/__init__.py        1      0   100%
+src/slotfinder/__main__.py        3      0   100%
+src/slotfinder/cli.py            35      0   100%
+src/slotfinder/core.py           24      0   100%
+src/slotfinder/errors.py         16      0   100%
+src/slotfinder/intervals.py      42      0   100%
+src/slotfinder/model.py          19      0   100%
+src/slotfinder/output.py         13      0   100%
+src/slotfinder/parsing.py       119      0   100%
+-----------------------------------------------------------
+TOTAL                           272      0   100%
+Coverage JSON written to file /workspaces/SDLC_assignment1/Assignment-1/Part-1A/evidence/harness-results/run-08-coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+202 passed in 3.11s

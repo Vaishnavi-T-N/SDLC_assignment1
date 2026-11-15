@@ -1,0 +1,82 @@
+{
+  "run": "run-06",
+  "timestamp_utc": "2026-11-15T13:29:26+00:00",
+  "python": "3.13.18",
+  "overall": "FAIL",
+  "gates": [
+    {
+      "gate": "lint",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m ruff check src tests --output-format json --no-cache",
+      "exit_code": 1,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "rule": "invalid-syntax",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 71,
+          "message": "Got unexpected token `"
+        },
+        {
+          "rule": "invalid-syntax",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 71,
+          "message": "Got unexpected token `"
+        },
+        {
+          "rule": "invalid-syntax",
+          "file": "tests/unit/test_model_and_parsing.py",
+          "line": 71,
+          "message": "Got unexpected token `"
+        }
+      ],
+      "details": {
+        "violations": 3,
+        "parse_error": null
+      },
+      "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 30,\n      \"row\": 71\n    },\n    \"filename\": \"/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 29,\n      \"row\": 71\n    },\n    \"message\": \"Got unexpected token `\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 31,\n      \"row\": 71\n    },\n    \"filename\": \"/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 30,\n      \"row\": 71\n    },\n    \"message\": \"Got unexpected token `\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 32,\n      \"row\": 71\n    },\n    \"filename\": \"/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 31,\n      \"row\": 71\n    },\n    \"message\": \"Got unexpected token `\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+      "stderr": ""
+    },
+    {
+      "gate": "security",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "findings": 0,
+        "tool_errors": [],
+        "parse_error": null
+      },
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-11-15T13:29:28Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 974,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 2,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/__main__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 3,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/client.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 112,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/config.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 59,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/contract.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/extractor.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 113,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/guardrails.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 145,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/invariants.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 170,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/model.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 79,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/parsing.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 50,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/scoring.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 121,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/textnorm.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 32,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+      "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+    },
+    {
+      "gate": "tests",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m pytest --cov=actionx --cov-report=json:/workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-06-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=/workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-06-junit.xml -p no:cacheprovider -q",
+      "exit_code": 2,
+      "status": "FAIL",
+      "failed_items": [
+        {
+          "test": "::tests.unit.test_model_and_parsing",
+          "kind": "error",
+          "message": "collection failure\n.venv/lib/python3.13/site-packages/_pytest/python.py:528: in importtestmodule\n    mod = import_path(\n.venv/lib/python3.13/site-packages/_pytest/pathlib.py:640: in import_path\n    importlib.import_module(module_name)\n/home/codespace/.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n<frozen importlib._bootstrap>:1404: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1369: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1340: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n.venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:176: in exec_module\n    source_hash, co = _rewrite_test(fn, self.config)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:339: in _rewrite_test\n    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/home/codespace/.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py\", line 71\nE       assert parse_model_text(```'json\\n{\"a\": 1}\\n```') == {\"a\": 1}\nE                               ^\nE   SyntaxError: invalid syntax",
+          "expected_vs_observed": {
+            "observed": "parse_model_text(```'json\\n{\"a\": 1}\\n```')",
+            "expected": "{\"a\": 1}"
+          }
+        }
+      ],
+      "details": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 1,
+        "skipped": 0,
+        "line_coverage_percent": null,
+        "coverage_threshold_percent": 90.0,
+        "parse_error": " coverage: [Errno 2] No such file or directory: '/workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-06-coverage.json'"
+      },
+      "stdout": "\n==================================== ERRORS ====================================\n____________ ERROR collecting tests/unit/test_model_and_parsing.py _____________\n.venv/lib/python3.13/site-packages/_pytest/python.py:528: in importtestmodule\n    mod = import_path(\n.venv/lib/python3.13/site-packages/_pytest/pathlib.py:640: in import_path\n    importlib.import_module(module_name)\n/home/codespace/.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n<frozen importlib._bootstrap>:1404: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1369: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1340: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n.venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:176: in exec_module\n    source_hash, co = _rewrite_test(fn, self.config)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:339: in _rewrite_test\n    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/home/codespace/.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/workspaces/SDLC_assignment1/Assignment-1/Part-1B/tests/unit/test_model_and_parsing.py\", line 71\nE       assert parse_model_text(```'json\\n{\"a\": 1}\\n```') == {\"a\": 1}\nE                               ^\nE   SyntaxError: invalid syntax\n=========================== short test summary info ============================\nERROR tests/unit/test_model_and_parsing.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 1.04s\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "run": "run-07",
+  "timestamp_utc": "2026-11-15T13:01:13+00:00",
+  "python": "3.13.18",
+  "overall": "PASS",
+  "gates": [
+    {
+      "gate": "lint",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1A/.venv/bin/python -m ruff check src tests --output-format json --no-cache",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "violations": 0,
+        "parse_error": null
+      },
+      "stdout": "[]",
+      "stderr": ""
+    },
+    {
+      "gate": "security",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1A/.venv/bin/python -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "findings": 0,
+        "tool_errors": [],
+        "parse_error": null
+      },
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-11-15T13:01:18Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 323,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 2,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/__main__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 4,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 39,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/core.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 31,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/errors.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 19,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/intervals.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 49,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/model.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 23,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/output.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 19,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/slotfinder/parsing.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 137,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+      "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+    },
+    {
+      "gate": "tests",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1A/.venv/bin/python -m pytest --cov=slotfinder --cov-report=json:/workspaces/SDLC_assignment1/Assignment-1/Part-1A/evidence/harness-results/run-07-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=/workspaces/SDLC_assignment1/Assignment-1/Part-1A/evidence/harness-results/run-07-junit.xml -p no:cacheprovider -q",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "tests": 202,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "line_coverage_percent": 100.0,
+        "coverage_threshold_percent": 90.0,
+        "parse_error": null
+      },
+      "stdout": "........................................................................ [ 35%]\n........................................................................ [ 71%]\n..........................................................               [100%]\n================================ tests coverage ================================\n_______________ coverage: platform linux, python 3.13.18-final-0 _______________\n\nName                          Stmts   Miss  Cover   Missing\n-----------------------------------------------------------\nsrc/slotfinder/__init__.py        1      0   100%\nsrc/slotfinder/__main__.py        3      0   100%\nsrc/slotfinder/cli.py            35      0   100%\nsrc/slotfinder/core.py           24      0   100%\nsrc/slotfinder/errors.py         16      0   100%\nsrc/slotfinder/intervals.py      42      0   100%\nsrc/slotfinder/model.py          19      0   100%\nsrc/slotfinder/output.py         13      0   100%\nsrc/slotfinder/parsing.py       119      0   100%\n-----------------------------------------------------------\nTOTAL                           272      0   100%\nCoverage JSON written to file /workspaces/SDLC_assignment1/Assignment-1/Part-1A/evidence/harness-results/run-07-coverage.json\nRequired test coverage of 90% reached. Total coverage: 100.00%\n202 passed in 2.76s\n",
+      "stderr": ""
+    }
+  ]
+}
