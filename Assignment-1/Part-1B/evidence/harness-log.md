@@ -123,3 +123,33 @@ must not be edited.
 - failed cases (hard gate): none
 - structured result: evidence/eval-runs/run-02.json
 
+### run-04 | 2026-11-15T09:30:02+00:00 | PASS
+
+- lint: PASS (exit code 0)
+- security: PASS (exit code 0)
+- tests: PASS (exit code 0)
+- line coverage: 99.07 %
+- structured result: evidence/harness-results/run-04.json
+
+### run-03 | 2026-11-15T10:35:31+00:00 | INCONCLUSIVE | MODE=gemini
+
+- model: gemini-3.5-flash; temperature: 0.0; seed: 7
+- prompt sha256: 5229233c3e34ba593c201d7edebf6450724a848b6c2c326d7bfa6eeee0cbad8d
+- dataset sha256: 58036439027cf2c49c2debd4ff43aaa747dc5b4be17c4e2141412a08e4308f0e
+- threshold: {"hard_gate_rate": 1.0, "f1_min": 0.8, "owner_accuracy_min": 0.85, "due_accuracy_min": 0.85, "fabrication_max": 0, "match_similarity_cutoff": 0.5}
+- layer 1: 23/23 pass; layer 2: 23/23 pass; hard-gate pass rate 1.0000
+- layer 3 (final): F1 1.0000, owner accuracy 1.0000, due accuracy 1.0000, fabrication 0
+- gates: {"hard_gate": true, "f1": true, "owner_accuracy": true, "due_accuracy": true, "fabrication": true}
+- raw model output (informational): hard-gate pass rate 0.9130, F1 1.0000
+- SERVICE_ERRORs: 3 (boundary-very-long-notes:api, missing-no-actions-at-all:api, malformed-gibberish:api)
+- failed cases (hard gate): none
+- structured result: evidence/eval-runs/run-03.json
+
+### run-05 | 2026-11-15T10:40:39+00:00 | PASS
+
+- lint: PASS (exit code 0)
+- security: PASS (exit code 0)
+- tests: PASS (exit code 0)
+- line coverage: 99.07 %
+- structured result: evidence/harness-results/run-05.json
+

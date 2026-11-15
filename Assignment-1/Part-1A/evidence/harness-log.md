@@ -73,3 +73,11 @@ The last section is filled in automatically by `.harness/run_harness.py` and mus
 - line coverage: 100.00 %
 - structured result: evidence/harness-results/run-05.json
 
+### run-06 | 2026-11-15T10:44:18+00:00 | PASS
+
+- lint: PASS (exit code 0)
+- security: PASS (exit code 0)
+- tests: PASS (exit code 0)
+- line coverage: 100.00 %
+- structured result: evidence/harness-results/run-06.json
+

@@ -1,0 +1,53 @@
+{
+  "run": "run-05",
+  "timestamp_utc": "2026-11-15T10:40:39+00:00",
+  "python": "3.13.18",
+  "overall": "PASS",
+  "gates": [
+    {
+      "gate": "lint",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m ruff check src tests --output-format json --no-cache",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "violations": 0,
+        "parse_error": null
+      },
+      "stdout": "[]",
+      "stderr": ""
+    },
+    {
+      "gate": "security",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m bandit -r src -c pyproject.toml --severity-level all --confidence-level all -f json",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "findings": 0,
+        "tool_errors": [],
+        "parse_error": null
+      },
+      "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2026-11-15T10:40:42Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 974,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 2,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/__main__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 3,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/cli.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/client.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 112,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/config.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 59,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/contract.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 44,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/extractor.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 113,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/guardrails.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 145,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/invariants.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 170,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/model.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 79,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/parsing.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 50,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/scoring.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 121,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"src/actionx/textnorm.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 32,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+      "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+    },
+    {
+      "gate": "tests",
+      "command": "/workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/bin/python -m pytest --cov=actionx --cov-report=json:/workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-05-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=/workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-05-junit.xml -p no:cacheprovider -q",
+      "exit_code": 0,
+      "status": "PASS",
+      "failed_items": [],
+      "details": {
+        "tests": 142,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "line_coverage_percent": 99.06687402799378,
+        "coverage_threshold_percent": 90.0,
+        "parse_error": null
+      },
+      "stdout": "........................................................................ [ 50%]\n......................................................................   [100%]\n================================ tests coverage ================================\n_______________ coverage: platform linux, python 3.13.18-final-0 _______________\n\nName                        Stmts   Miss  Cover   Missing\n---------------------------------------------------------\nsrc/actionx/__init__.py         1      0   100%\nsrc/actionx/__main__.py         3      3     0%   1-5\nsrc/actionx/cli.py             35      1    97%   20\nsrc/actionx/client.py          53      0   100%\nsrc/actionx/config.py          42      0   100%\nsrc/actionx/contract.py        23      0   100%\nsrc/actionx/extractor.py       65      0   100%\nsrc/actionx/guardrails.py     105      0   100%\nsrc/actionx/invariants.py     134      1    99%   69\nsrc/actionx/model.py           52      0   100%\nsrc/actionx/parsing.py         47      0   100%\nsrc/actionx/scoring.py         60      0   100%\nsrc/actionx/textnorm.py        23      1    96%   32\n---------------------------------------------------------\nTOTAL                         643      6    99%\nCoverage JSON written to file /workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-05-coverage.json\nRequired test coverage of 90% reached. Total coverage: 99.07%\n142 passed in 2.16s\n",
+      "stderr": ""
+    }
+  ]
+}

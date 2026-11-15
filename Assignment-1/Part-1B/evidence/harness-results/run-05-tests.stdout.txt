@@ -1,0 +1,25 @@
+........................................................................ [ 50%]
+......................................................................   [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.18-final-0 _______________
+
+Name                        Stmts   Miss  Cover   Missing
+---------------------------------------------------------
+src/actionx/__init__.py         1      0   100%
+src/actionx/__main__.py         3      3     0%   1-5
+src/actionx/cli.py             35      1    97%   20
+src/actionx/client.py          53      0   100%
+src/actionx/config.py          42      0   100%
+src/actionx/contract.py        23      0   100%
+src/actionx/extractor.py       65      0   100%
+src/actionx/guardrails.py     105      0   100%
+src/actionx/invariants.py     134      1    99%   69
+src/actionx/model.py           52      0   100%
+src/actionx/parsing.py         47      0   100%
+src/actionx/scoring.py         60      0   100%
+src/actionx/textnorm.py        23      1    96%   32
+---------------------------------------------------------
+TOTAL                         643      6    99%
+Coverage JSON written to file /workspaces/SDLC_assignment1/Assignment-1/Part-1B/evidence/harness-results/run-05-coverage.json
+Required test coverage of 90% reached. Total coverage: 99.07%
+142 passed in 2.16s
