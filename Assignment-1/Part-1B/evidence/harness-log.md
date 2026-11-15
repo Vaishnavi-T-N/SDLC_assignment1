@@ -1,21 +1,21 @@
 # Harness Log
 
 The five sections below are written by the student. They are intentionally left empty.
-The last section is filled in automatically by `.harness/run_harness.py` (code-quality gates, entries
-`run-NN`) and `.harness/run_eval.py --client gemini` (live evaluation, entries `run-NN` under eval) and
+The last section is filled in automatically by '.harness/run_harness.py' (code-quality gates, entries
+'run-NN') and '.harness/run_eval.py --client gemini' (live evaluation, entries 'run-NN' under eval) and
 must not be edited.
 
 ## Model/config interpretation
 
-The application calls Google Gemini through the `google-genai` SDK with temperature 0.0 and seed 7, and the system prompt is versioned in `prompts/extractor_system.md`. The local runs were configured for `gemini-2.5-pro`; the live run in the Codespace used `gemini-3.5-flash`, as printed at the top of that run. The thresholds were declared in the specification before any live evaluation: 100% of cases pass the schema and invariant layers, F1 of at least 0.80, owner and due-date accuracy of at least 0.85, zero fabrications, a task-match similarity cutoff of 0.5, and any service error makes the run INCONCLUSIVE.
+The application calls Google Gemini through the 'google-genai' SDK with temperature 0.0 and seed 7, and the system prompt is versioned in 'prompts/extractor_system.md'. The local runs were configured for 'gemini-2.5-pro'; the live run in the Codespace used 'gemini-3.5-flash', as printed at the top of that run. The thresholds were declared in the specification before any live evaluation: 100% of cases pass the schema and invariant layers, F1 of at least 0.80, owner and due-date accuracy of at least 0.85, zero fabrications, a task-match similarity cutoff of 0.5, and any service error makes the run INCONCLUSIVE.
 
 ## Meaningful failures and evidence supplied to coding agent
 
-Quality harness run-01 failed on lint (E501 and I001 in several files, S105 in a test), on Bandit B105 (the threshold key `hard_gate_pass_rate` looked like a password) and on `test_ac50_below_cutoff_does_not_match`, whose example pair scored 0.70 instead of below the cutoff. Evidence is in `evidence/repair-cycle-01/failure-evidence.md`. For the live evaluation, local runs 01 and 02 were INCONCLUSIVE: 24 cases hit `CERTIFICATE_VERIFY_FAILED`, because `SSL_CERT_FILE` pointed to the company's TLS-inspection certificate bundle, not because of the application. Run-03, in a Codespace, scored 23 cases PASS and 3 SERVICE_ERROR (`boundary-very-long-notes`, `missing-no-actions-at-all`, `malformed-gibberish`), so its verdict is INCONCLUSIVE.
+Quality harness run-01 failed on lint (E501 and I001 in several files, S105 in a test), on Bandit B105 (the threshold key 'hard_gate_pass_rate' looked like a password) and on 'test_ac50_below_cutoff_does_not_match', whose example pair scored 0.70 instead of below the cutoff. Evidence is in 'evidence/repair-cycle-01/failure-evidence.md'. For the live evaluation, local runs 01 and 02 were INCONCLUSIVE: 24 cases hit 'CERTIFICATE_VERIFY_FAILED', because 'SSL_CERT_FILE' pointed to the company's TLS-inspection certificate bundle, not because of the application. Run-03, in a Codespace, scored 23 cases PASS and 3 SERVICE_ERROR ('boundary-very-long-notes', 'missing-no-actions-at-all', 'malformed-gibberish'), so its verdict is INCONCLUSIVE.
 
 ## Repair
 
-For the quality failures the coding agent ran `ruff format` and `ruff check --fix`, renamed the test variable to `sentinel`, renamed the threshold key to `hard_gate_rate` (value unchanged, spec changelog v0.4) and replaced the bad example pair, leaving the assertion as it was. Run-02 and run-03 then passed all gates. The certificate problem needed no code change: the live evaluation was run from a different environment. The 3 remaining service errors were not investigated, and the spec was not relaxed to hide them.
+For the quality failures the coding agent ran 'ruff format' and 'ruff check --fix', renamed the test variable to 'sentinel', renamed the threshold key to 'hard_gate_rate' (value unchanged, spec changelog v0.4) and replaced the bad example pair, leaving the assertion as it was. Run-02 and run-03 then passed all gates. The certificate problem needed no code change: the live evaluation was run from a different environment. The 3 remaining service errors were not investigated, and the spec was not relaxed to hide them.
 
 ## Known limitations and residual risks
 

@@ -1,4 +1,4 @@
-"""The model seam: `ModelClient` protocol, `FakeModelClient` and the live `GeminiClient`."""
+"""The model seam: 'ModelClient' protocol, 'FakeModelClient' and the live 'GeminiClient'."""
 
 from __future__ import annotations
 
@@ -24,12 +24,12 @@ class ModelClient(Protocol):
         seed: int,
         response_schema: dict[str, Any],
     ) -> str:
-        """Return the raw model text or raise `ServiceError`."""
+        """Return the raw model text or raise 'ServiceError'."""
         ...
 
 
 class FakeModelClient:
-    """Serves pre-recorded responses in order; an `Exception` item is raised instead."""
+    """Serves pre-recorded responses in order; an 'Exception' item is raised instead."""
 
     def __init__(self, responses: Sequence[str | Exception]) -> None:
         self._responses = list(responses)
@@ -65,7 +65,7 @@ _SAFETY_MARKERS = ("SAFETY", "BLOCKLIST", "PROHIBITED", "SPII", "IMAGE_SAFETY", 
 
 
 class GeminiClient:
-    """Live client using the `google-genai` SDK. The SDK can be injected for tests."""
+    """Live client using the 'google-genai' SDK. The SDK can be injected for tests."""
 
     def __init__(
         self,

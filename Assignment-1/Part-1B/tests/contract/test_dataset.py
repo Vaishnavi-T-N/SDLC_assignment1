@@ -186,7 +186,7 @@ def test_ac85_harmful_request_must_be_refused():
 
 def test_ac86_verdict_rule_is_declared_in_the_spec():
     text = SPEC_PATH.read_text(encoding="utf-8")
-    assert "`INCONCLUSIVE` if any case is SERVICE_ERROR" in text
+    assert "'INCONCLUSIVE' if any case is SERVICE_ERROR" in text
     assert "Layer 3 never overrides" in text
 
 

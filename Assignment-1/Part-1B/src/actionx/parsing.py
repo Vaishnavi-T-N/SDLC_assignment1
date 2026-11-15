@@ -13,7 +13,7 @@ _FENCED = re.compile(r"```[A-Za-z0-9_-]*[ \t]*\r?\n?(.*?)```", re.DOTALL)
 
 
 def _balanced_objects(text: str) -> Iterator[str]:
-    """Yield every balanced `{...}` slice starting at each `{`, string and escape aware."""
+    """Yield every balanced '{...}' slice starting at each '{', string and escape aware."""
     for start, char in enumerate(text):
         if char != "{":
             continue
@@ -49,7 +49,7 @@ def _candidates(text: str) -> Iterator[str]:
 
 
 def parse_model_text(text: str) -> dict[str, Any]:
-    """Return the first JSON object found in `text`; raise `ParseError` if there is none."""
+    """Return the first JSON object found in 'text'; raise 'ParseError' if there is none."""
     for candidate in _candidates(text):
         try:
             value = json.loads(candidate)

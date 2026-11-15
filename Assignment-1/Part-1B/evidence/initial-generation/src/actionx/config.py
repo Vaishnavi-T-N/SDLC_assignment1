@@ -38,7 +38,7 @@ class Config:
 
 
 def load_dotenv(path: Path, environ: MutableMapping[str, str] | None = None) -> None:
-    """Load KEY=VALUE lines from `path` without overriding variables that are already set."""
+    """Load KEY=VALUE lines from 'path' without overriding variables that are already set."""
     target = os.environ if environ is None else environ
     if not path.is_file():
         return

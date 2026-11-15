@@ -1,21 +1,21 @@
 # Failure evidence: repair cycle 01 (source: run-01)
 
-Harness run: `run-01` at 2026-11-15T06:48:11+00:00, overall FAIL. Structured record: `evidence/harness-results/run-01.json` (kept unchanged).
+Harness run: 'run-01' at 2026-11-15T06:48:11+00:00, overall FAIL. Structured record: 'evidence/harness-results/run-01.json' (kept unchanged).
 
 Gate outcomes: lint=FAIL, security=PASS, tests=FAIL
 
 
 ## Gate: lint (FAIL, exit code 1)
 
-Command: `C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m ruff check src tests --output-format json --no-cache`
+Command: 'C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m ruff check src tests --output-format json --no-cache'
 
 ### Failed rules / tests (parsed)
 
-- rule `I001` at `tests/contract/test_cli_contract.py:3`: Import block is un-sorted or un-formatted
-- rule `I001` at `tests/property/test_properties.py:6`: Import block is un-sorted or un-formatted
-- rule `UP033` at `tests/property/test_properties.py:81`: Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`
-- rule `I001` at `tests/unit/test_core.py:3`: Import block is un-sorted or un-formatted
-- rule `I001` at `tests/unit/test_parsing.py:3`: Import block is un-sorted or un-formatted
+- rule 'I001' at 'tests/contract/test_cli_contract.py:3': Import block is un-sorted or un-formatted
+- rule 'I001' at 'tests/property/test_properties.py:6': Import block is un-sorted or un-formatted
+- rule 'UP033' at 'tests/property/test_properties.py:81': Use '@functools.cache' instead of '@functools.lru_cache(maxsize=None)'
+- rule 'I001' at 'tests/unit/test_core.py:3': Import block is un-sorted or un-formatted
+- rule 'I001' at 'tests/unit/test_parsing.py:3': Import block is un-sorted or un-formatted
 
 ### Verbatim stdout
 
@@ -125,13 +125,13 @@ Command: `C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m ruff check src tes
           }
         }
       ],
-      "message": "Rewrite with `@functools.cache"
+      "message": "Rewrite with '@functools.cache"
     },
     "location": {
       "column": 11,
       "row": 81
     },
-    "message": "Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`",
+    "message": "Use '@functools.cache' instead of '@functools.lru_cache(maxsize=None)'",
     "name": "lru-cache-with-maxsize-none",
     "noqa_row": 81,
     "severity": "error",
@@ -219,13 +219,13 @@ Command: `C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m ruff check src tes
 
 ## Gate: tests (FAIL, exit code 1)
 
-Command: `C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m pytest --cov=slotfinder --cov-report=json:C:\Assignment-1\Part-1A\evidence\harness-results\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\Assignment-1\Part-1A\evidence\harness-results\run-01-junit.xml -p no:cacheprovider -q`
+Command: 'C:\Assignment-1\Part-1A\.venv\Scripts\python.exe -m pytest --cov=slotfinder --cov-report=json:C:\Assignment-1\Part-1A\evidence\harness-results\run-01-coverage.json --cov-report=term-missing --cov-fail-under=90 --junitxml=C:\Assignment-1\Part-1A\evidence\harness-results\run-01-junit.xml -p no:cacheprovider -q'
 
 ### Failed rules / tests (parsed)
 
-- test `tests.contract.test_traceability::test_ac31_every_acceptance_criterion_is_cited_by_a_test` (failure)
-  - expected: `[]`
-  - observed: `['AC-31']`
+- test 'tests.contract.test_traceability::test_ac31_every_acceptance_criterion_is_cited_by_a_test' (failure)
+  - expected: '[]'
+  - observed: '['AC-31']'
 
 ### Verbatim stdout
 

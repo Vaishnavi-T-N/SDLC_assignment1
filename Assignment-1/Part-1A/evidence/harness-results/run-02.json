@@ -14,14 +14,14 @@
           "rule": "F401",
           "file": "tests/property/test_properties.py",
           "line": 7,
-          "message": "`functools.lru_cache` imported but unused"
+          "message": "'functools.lru_cache' imported but unused"
         }
       ],
       "details": {
         "violations": 1,
         "parse_error": null
       },
-      "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 39,\n      \"row\": 7\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\property\\\\test_properties.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from functools import cache\",\n          \"end_location\": {\n            \"column\": 39,\n            \"row\": 7\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 7\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `functools.lru_cache`\"\n    },\n    \"location\": {\n      \"column\": 30,\n      \"row\": 7\n    },\n    \"message\": \"`functools.lru_cache` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  }\n]",
+      "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 39,\n      \"row\": 7\n    },\n    \"filename\": \"C:\\\\Assignment-1\\\\Part-1A\\\\tests\\\\property\\\\test_properties.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"from functools import cache\",\n          \"end_location\": {\n            \"column\": 39,\n            \"row\": 7\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 7\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: 'functools.lru_cache'\"\n    },\n    \"location\": {\n      \"column\": 30,\n      \"row\": 7\n    },\n    \"message\": \"'functools.lru_cache' imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  }\n]",
       "stderr": ""
     },
     {

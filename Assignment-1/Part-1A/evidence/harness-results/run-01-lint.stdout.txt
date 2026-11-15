@@ -103,13 +103,13 @@
           }
         }
       ],
-      "message": "Rewrite with `@functools.cache"
+      "message": "Rewrite with '@functools.cache"
     },
     "location": {
       "column": 11,
       "row": 81
     },
-    "message": "Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`",
+    "message": "Use '@functools.cache' instead of '@functools.lru_cache(maxsize=None)'",
     "name": "lru-cache-with-maxsize-none",
     "noqa_row": 81,
     "severity": "error",

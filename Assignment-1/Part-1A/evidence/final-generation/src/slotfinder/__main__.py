@@ -1,4 +1,4 @@
-"""Entry point for ``python -m slotfinder``."""
+"""Entry point for ''python -m slotfinder''."""
 
 from slotfinder.cli import main
 

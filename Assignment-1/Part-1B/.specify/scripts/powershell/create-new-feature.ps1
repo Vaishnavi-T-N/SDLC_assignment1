@@ -227,7 +227,7 @@ if ($Timestamp) {
 } else {
     # Determine branch number from existing feature directories. Auto-detect only
     # when -Number was not supplied; an explicit value (including 0) is honored,
-    # matching the bash twin's `[ -z "$BRANCH_NUMBER" ]` check.
+    # matching the bash twin's '[ -z "$BRANCH_NUMBER" ]' check.
     [long]$resolvedNumber = 0
     if (-not $hasNumber) {
         $highestNumber = Get-HighestNumberFromSpecs -SpecsDir $specsDir

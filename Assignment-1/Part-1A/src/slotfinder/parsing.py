@@ -1,4 +1,4 @@
-"""Validate an untrusted request object into a ``Request`` (FR-03 to FR-13, FR-19, FR-22).
+"""Validate an untrusted request object into a ''Request'' (FR-03 to FR-13, FR-19, FR-22).
 
 Faults are reported in the order given by FR-19. This module performs no I/O.
 """
@@ -142,7 +142,7 @@ def _parse_participant(raw: Any, index: int) -> Participant:
 
 
 def parse_request(data: Any) -> Request:
-    """Validate ``data`` (the decoded JSON value) and return a ``Request``."""
+    """Validate ''data'' (the decoded JSON value) and return a ''Request''."""
     if not isinstance(data, dict):
         raise _fail(ErrorCode.INVALID_JSON, "top-level JSON value must be an object")
     raw_window = _require(data, "window", "request")

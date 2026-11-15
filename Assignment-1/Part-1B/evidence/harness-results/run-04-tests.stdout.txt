@@ -3,11 +3,11 @@
 =============================== warnings summary ===============================
 tests/unit/test_client_config.py::test_gemini_client_default_sdk_import_builds_a_client
   /workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/lib/python3.13/site-packages/google/genai/types.py:18308: SyntaxWarning: invalid escape sequence '\/'
-    description="""Output only. The original name of the uploaded file, taken from the `Content-Disposition` header on upload. Between 1 and 255 characters. Control characters and the characters `<>:"|?*\/` are not accepted.""",
+    description="""Output only. The original name of the uploaded file, taken from the 'Content-Disposition' header on upload. Between 1 and 255 characters. Control characters and the characters '<>:"|?*\/' are not accepted.""",
 
 tests/unit/test_client_config.py::test_gemini_client_default_sdk_import_builds_a_client
   /workspaces/SDLC_assignment1/Assignment-1/Part-1B/.venv/lib/python3.13/site-packages/google/genai/types.py:18346: SyntaxWarning: invalid escape sequence '\/'
-    """Output only. The original name of the uploaded file, taken from the `Content-Disposition` header on upload. Between 1 and 255 characters. Control characters and the characters `<>:"|?*\/` are not accepted."""
+    """Output only. The original name of the uploaded file, taken from the 'Content-Disposition' header on upload. Between 1 and 255 characters. Control characters and the characters '<>:"|?*\/' are not accepted."""
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ================================ tests coverage ================================

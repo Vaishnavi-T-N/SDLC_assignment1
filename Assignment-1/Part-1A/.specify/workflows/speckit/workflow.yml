@@ -13,10 +13,10 @@ requires:
     # The four commands below (specify, plan, tasks, implement) are core
     # spec-kit commands provided by every integration. The list here is an
     # advisory, non-exhaustive compatibility hint following the documented
-    # ``any: [...]`` schema -- it is NOT a closed set. The workflow runs
+    # ''any: [...]'' schema -- it is NOT a closed set. The workflow runs
     # against any integration the project was initialized with, including
     # ones not listed below, as long as that integration provides the four
-    # core commands referenced in ``steps``.
+    # core commands referenced in ''steps''.
     any:
       - "alquimia"
       - "claude"

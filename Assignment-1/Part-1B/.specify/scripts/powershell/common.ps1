@@ -33,7 +33,7 @@ function Find-SpecifyRoot {
 # or writes an error and exits 1 unless -ReturnNullOnError is set. Strict by
 # design: the path must exist and
 # contain .specify/, with no silent fallback. (An empty string is falsy, so the
-# caller's `if ($env:SPECIFY_INIT_DIR)` guard treats empty as unset.)
+# caller's 'if ($env:SPECIFY_INIT_DIR)' guard treats empty as unset.)
 #
 # This is the single resolver: bundled extensions inherit it by sourcing core
 # (e.g. the git extension's create-new-feature-branch) rather than duplicating it.
@@ -55,7 +55,7 @@ function Resolve-SpecifyInitDir {
         exit 1
     }
     # Resolve-Path echoes back any trailing separator from the input; trim it so
-    # the returned root matches the bash resolver, whose `cd && pwd` never yields
+    # the returned root matches the bash resolver, whose 'cd && pwd' never yields
     # one. TrimEnd (not [Path]::TrimEndingDirectorySeparator, which is .NET Core
     # only) keeps this working on Windows PowerShell 5.1 / .NET Framework, as
     # Get-FeaturePathsEnv already does below. Unlike a bare TrimEnd, the
@@ -685,7 +685,7 @@ except Exception as exc:
                             throw "Invalid preset manifest $manifest"
         }
                         if ($stratResult) {
-                            $parts = $stratResult.Trim() -split "`t", 3
+                            $parts = $stratResult.Trim() -split "'t", 3
                             $manifestDeclared = $parts[0] -eq 'found'
                             $strategy = $parts[1].ToLowerInvariant()
                             if ($parts.Count -gt 2 -and $parts[2]) { $manifestFilePath = $parts[2] }
@@ -797,8 +797,8 @@ except Exception as exc:
 
         switch ($strat) {
             'replace' { $content = $layerContent }
-            'prepend' { $content = "$layerContent`n`n$content" }
-            'append'  { $content = "$content`n`n$layerContent" }
+            'prepend' { $content = "$layerContent'n'n$content" }
+            'append'  { $content = "$content'n'n$layerContent" }
             'wrap'    {
                 if (-not $layerContent.Contains('{CORE_TEMPLATE}')) {
                     throw "Wrap strategy missing {CORE_TEMPLATE} placeholder"

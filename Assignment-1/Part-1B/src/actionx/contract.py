@@ -24,7 +24,7 @@ _GEMINI_KEYWORDS = frozenset(
 
 
 def validate_output(schema: dict[str, Any], value: Any) -> list[str]:
-    """Return schema violations as `path: message` strings (empty list means valid)."""
+    """Return schema violations as 'path: message' strings (empty list means valid)."""
     validator = Draft202012Validator(schema)
     errors = sorted(validator.iter_errors(value), key=lambda e: [str(p) for p in e.absolute_path])
     return [
